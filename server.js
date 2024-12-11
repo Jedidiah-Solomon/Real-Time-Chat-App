@@ -1,10 +1,20 @@
 const dotenv = require("dotenv").config();
+const express = require("express");
+const app = express();
+const server = require("http").Server(app);
+const io = require("socket.io")(server);
+
+app.set("views", "./views");
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
+
+//------------------//
 const {
   addUserToFirestore,
   addMessageToFirestore,
   deleteUserFromFirestore,
 } = require("./utils/helper");
-const io = require("socket.io")(3000);
 
 const users = {};
 
