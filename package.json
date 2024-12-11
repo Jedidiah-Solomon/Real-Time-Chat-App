@@ -1,0 +1,17 @@
+{
+  "name": "real-time-chat-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "socket.io": "^2.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
